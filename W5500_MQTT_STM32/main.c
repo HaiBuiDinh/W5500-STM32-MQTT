@@ -17,17 +17,9 @@
 
 void Delay(__IO uint32_t nCount);
 uint8_t  socket_sn = 0;
-uint16_t status_RX = 0, status_RX_1 = 0;
 
 int main(void)
 {
-  //ham dung de fix memory of RX register "setSn_RXBUF_SIZE", voi TX thi cung tuong tu.
-  uint8_t data_buf[2048] = {0}; //Max size of buffer = 2048 (tested) 
-
-  uint8_t connected_cf[3] = {'O', 'k', '\n'};
-  uint8_t received_cf[5] = {'D', 'o', 'n', 'e', '\n'};
-  uint32_t flashdestination;
-  flashdestination = APPLICATION_ADDRESS;
   //Khoi tao cac thong so co ban MAC, IP, GW, SN,...
   W5500_Init();
   //Disconnet cho chac cu

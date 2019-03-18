@@ -2092,6 +2092,9 @@
         </file>
     </group>
     <group>
+        <name>MQTT</name>
+    </group>
+    <group>
         <name>Std_Lib</name>
         <file>
             <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c</name>
