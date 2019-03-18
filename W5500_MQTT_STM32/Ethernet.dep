@@ -197,6 +197,10 @@
             </outputs>
             <inputs>
                 <tool>
+                    <name>BICOMP</name>
+                    <file> 42 103 49 137 57 141 80 106 84 93 113 148 136 155 78 89 104 118 149 145 105 87 151 86 81 14 152 124 67 109 39 83 76 162 117 135 45 116 92 143 55</file>
+                </tool>
+                <tool>
                     <name>ICCARM</name>
                     <file> 151 42 106 103 152 137 78 124 67 81 57 93 84 14 155 86 109 89 39 113 83 104 76 141 118 162 148 117 149 135 49 45 145 116 136 92 105 143 80 55 87</file>
                 </tool>
@@ -419,7 +423,7 @@
             <inputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 116 103 42 119 79 39 117 63 72 84 137 162 112 71 75 106 67 76 135 143 34 128 115 118 157 127 92 155 124 57 109 83 151 45 55 152 22 74 86 81 14 78 93 89 113 104 141 148 149 49 145 136 105 80 87</file>
+                    <file> 116 42 119 79 39 117 63 155 84 137 162 112 71 75 92 67 76 135 143 103 34 128 115 118 157 72 127 106 124 57 109 83 151 45 55 152 22 74 86 81 14 78 93 89 113 104 141 148 149 49 145 136 105 80 87</file>
                 </tool>
                 <tool>
                     <name>ICCARM</name>
@@ -839,94 +843,6 @@
                 </tool>
             </inputs>
         </file>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_flash.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\spi_cf.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Ethernet\socket.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\flash_f4.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\main.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Application\loopback\loopback.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\server.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Ethernet\W5500\w5500.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\client.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Ethernet\wizchip_conf.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Ethernet\dhcp.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\stm32f4xx_it.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>$PROJ_DIR$\src\led_cf.c</name>
-            <tool>ICCARM</tool>
-        </forcedrebuild>
     </configuration>
     <configuration>
         <name>Release</name>
