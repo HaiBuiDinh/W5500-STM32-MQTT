@@ -22,14 +22,7 @@ int main(void)
 {
   //Khoi tao cac thong so co ban MAC, IP, GW, SN,...
   W5500_Init();
-  //Disconnet cho chac cu
-  disconnect(socket_sn);
-  //Khoi tao socket 0 voi thong so:
-  //Mode: Sn_MR_TCP
-  //Port: 2525
-  server_init();
-  //Neu ket noi thanh cong -> gui thong bao
-  //Vao vong lap de xu ly tap tin  
+  //Khong khoi tao socket nua, dong vai tro nhu mot client
   while (1)
   {
     //Lang nghe xem co ket noi nao toi khong SOCK_LISTEN(0x14)
