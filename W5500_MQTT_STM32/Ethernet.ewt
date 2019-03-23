@@ -2383,6 +2383,42 @@
     </group>
     <group>
         <name>MQTT</name>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNConnectClient.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNConnectServer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNDeserializePublish.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNPacket.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNSearchClient.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNSearchServer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNSerializePublish.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNSubscribeClient.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNSubscribeServer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNUnsubscribeClient.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTTSNUnsubscribeServer.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\StackTrace.h</name>
+        </file>
     </group>
     <group>
         <name>Std_Lib</name>

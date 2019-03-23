@@ -21,6 +21,8 @@ C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32
 -I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Application\loopback
 -I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\Core\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
@@ -44,6 +46,8 @@ C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Ethernet\W5500
 -I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Application\loopback
+-I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\Core\Include
 -I
@@ -341,8 +345,8 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -DUSE_STDPERIPH_DRIVER=1
 -DSTM32F4XX=1
--D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Normal.h"
--D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Full.h"
+-D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Config_Full.h"
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.32.1.169/W32 for ARM"
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
 -D__VA_STACK_ALIGN__=8
