@@ -21,6 +21,10 @@ C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32
 -I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Application\loopback
 -I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTClient-C\src
+-I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTPacket\src
+-I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\Core\Include
@@ -46,6 +50,10 @@ C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Ethernet\W5500
 -I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Application\loopback
+-I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTClient-C\src
+-I
+C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTPacket\src
 -I
 C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt
 -I

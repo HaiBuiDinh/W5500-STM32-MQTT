@@ -120,6 +120,7 @@ static uint8_t W5500_ReadByte(void)
 static void W5500_Network_Init(void)
 {
 	uint8_t chipid[6];
+        
 	wiz_NetInfo gWIZNETINFO;
 	uint8_t mac[6] = {0x00, 0x08, 0xdc, 0x11, 0x11}; //<Source MAC Address>
 	uint8_t ip[4]  = {192, 168, 32, 120}; //<Source IP Address>
@@ -134,6 +135,7 @@ static void W5500_Network_Init(void)
 	memcpy(gWIZNETINFO.mac, mac, 6);
 	memcpy(gWIZNETINFO.dns, dns, 4);
 	gWIZNETINFO.dhcp = NETINFO_STATIC; //<1 - static, 2 - DHCP>
+
 	ctlnetwork(CN_SET_NETINFO, (void*)&gWIZNETINFO);
 	
 	ctlnetwork(CN_GET_NETINFO, (void*)&gWIZNETINFO);
@@ -169,7 +171,7 @@ void W5500_Init(void)
 	reg_wizchip_cs_cbfunc(W5500_CS_Select, W5500_CS_Deselect);
 	reg_wizchip_spi_cbfunc(W5500_ReadByte, W5500_WriteByte);
 	
-	W5500_Network_Init();
+	//W5500_Network_Init();
 }
 
 static void W5500_Mem_Init(void)

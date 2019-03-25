@@ -20,10 +20,10 @@ void server_init(void)
   //uint8_t buff_recv[2] = {0};
   socket(socket_sn, socket_protocol, socket_port, socket_flag);
   
-  while (getSn_SR(socket_sn) != SOCK_INIT)
+  while (getSn_SR(socket_sn) != SOCK_INIT);
     
   //listenning connect from client
-  listen(socket_sn);
+  //listen(socket_sn);
 
 }
 
