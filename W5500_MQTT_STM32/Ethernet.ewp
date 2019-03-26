@@ -358,9 +358,9 @@
                     <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Ethernet</state>
                     <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Ethernet\W5500</state>
                     <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\Application\loopback</state>
-                    <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTClient-C\src</state>
-                    <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTTPacket\src</state>
                     <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt</state>
+                    <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTT</state>
+                    <state>C:\Users\buidi\OneDrive\Desktop\Congty\PRJ3_3S\W5500-STM32-MQTT\W5500_MQTT_STM32\mqtt\MQTT\MQTTPacket\src</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2097,37 +2097,40 @@
     <group>
         <name>MQTT</name>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTClient-C\src\MQTTClient.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\mqtt_interface.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTConnectClient.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTClient.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTConnectServer.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTConnectClient.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTDeserializePublish.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTConnectServer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTFormat.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTDeserializePublish.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTPacket.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTFormat.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTSerializePublish.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTPacket.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTSubscribeClient.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTSerializePublish.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTSubscribeServer.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTSubscribeClient.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTUnsubscribeClient.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTSubscribeServer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\MQTTPacket\src\MQTTUnsubscribeServer.c</name>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTUnsubscribeClient.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\mqtt\MQTT\MQTTPacket\src\MQTTUnsubscribeServer.c</name>
         </file>
     </group>
     <group>
@@ -2175,10 +2178,10 @@
             <name>$PROJ_DIR$\main.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\src\server.c</name>
+            <name>$PROJ_DIR$\mqtt\mqtt_func.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\mqtt\setup_client.c</name>
+            <name>$PROJ_DIR$\src\server.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\src\spi_cf.c</name>

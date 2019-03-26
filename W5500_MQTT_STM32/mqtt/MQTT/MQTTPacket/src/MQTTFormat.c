@@ -114,7 +114,6 @@ int MQTTStringFormat_unsubscribe(char* strbuf, int strbuflen, unsigned char dup,
 }
 
 
-#if defined(MQTT_CLIENT)
 char* MQTTFormat_toClientString(char* strbuf, int strbuflen, unsigned char* buf, int buflen)
 {
 	int index = 0;
@@ -127,7 +126,6 @@ char* MQTTFormat_toClientString(char* strbuf, int strbuflen, unsigned char* buf,
 
 	switch (header.bits.type)
 	{
-
 	case CONNACK:
 	{
 		unsigned char sessionPresent, connack_rc;
@@ -182,9 +180,8 @@ char* MQTTFormat_toClientString(char* strbuf, int strbuflen, unsigned char* buf,
 	}
 	return strbuf;
 }
-#endif
 
-#if defined(MQTT_SERVER)
+
 char* MQTTFormat_toServerString(char* strbuf, int strbuflen, unsigned char* buf, int buflen)
 {
 	int index = 0;
@@ -259,4 +256,3 @@ char* MQTTFormat_toServerString(char* strbuf, int strbuflen, unsigned char* buf,
 	strbuf[strbuflen] = '\0';
 	return strbuf;
 }
-#endif

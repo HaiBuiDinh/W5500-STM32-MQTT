@@ -21,9 +21,5 @@ void server_init(void)
   socket(socket_sn, socket_protocol, socket_port, socket_flag);
   
   while (getSn_SR(socket_sn) != SOCK_INIT);
-    
-  //listenning connect from client
-  //listen(socket_sn);
-
 }
 
