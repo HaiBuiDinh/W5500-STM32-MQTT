@@ -117,6 +117,7 @@ static uint8_t W5500_ReadByte(void)
 	return(SPI_I2S_ReceiveData(SPI1));
 }
 
+/* Đoạn nay chi de show, phuc vu cho debug
 static void W5500_Network_Init(void)
 {
 	uint8_t chipid[6];
@@ -158,6 +159,7 @@ static void W5500_Network_Init(void)
 	w_NetTimeout.time_100us = 1000;
 	wizchip_settimeout(&w_NetTimeout);
 }
+*/
 
 //Khoi tao cai dat lien quan toi W5500
 

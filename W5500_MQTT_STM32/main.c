@@ -14,16 +14,12 @@
 #include "wizchip_conf.h"
 #include "w5500.h"
 
-/* Include MQTT library */
-//#include "MQTTClient.h"
-
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
 
-void Delay(__IO uint32_t nCount);
-uint8_t  socket_sn = 0;
 
+/* Initialize basic parameters */
 wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x08, 0xdc, 0x11, 0x11},
                             .ip = {192, 168, 32, 121},
                             .sn = {255, 255, 255, 0},
@@ -33,17 +29,12 @@ wiz_NetInfo gWIZNETINFO = { .mac = {0x00, 0x08, 0xdc, 0x11, 0x11},
 
 int main(void)
 {
-  //Khoi tao cac thong so co ban MAC, IP, GW, SN,...
-  W5500_Init();
-  wizchip_setnetinfo(&gWIZNETINFO);
-  ConnectToServer();
-  while (1)
-  {}
-}
-
-void Delay(__IO uint32_t nCount)
-{
-  while(nCount--)
-  {
-  }
+      W5500_Init();
+      
+      wizchip_setnetinfo(&gWIZNETINFO);
+      
+      ConnectToServer();
+      
+      while (1)
+      {}
 }

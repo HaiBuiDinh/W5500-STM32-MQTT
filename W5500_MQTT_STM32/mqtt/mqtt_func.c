@@ -1,4 +1,6 @@
 #include "mqtt_func.h"
+
+/* Include MQTT library */
 #include "mqtt_interface.h"
 #include "MQTTClient.h"
 
@@ -25,27 +27,6 @@ struct opts_struct
 { 
   (char*)"subscriber", 0, (char*)"\n", QOS0, "admin", "admin123", (char*)"localhost", 1883, 0 
 };
-/*
-// @brief messageArrived callback function
-void messageArrived(MessageData* md)
-{
-	unsigned char testbuffer[100];
-	MQTTMessage* message = md->message;
-
-	if (opts.showtopics)
-	{
-		memcpy(testbuffer,(char*)message->payload,(int)message->payloadlen);
-		*(testbuffer + (int)message->payloadlen + 1) = "\n";
-		printf("%s\r\n",testbuffer);
-	}
-	//	printf("%12s\r\n", md->topicName->lenstring.len, md->topicName->lenstring.data);
-	if (opts.nodelimiter)
-		printf("%.*s", (int)message->payloadlen, (char*)message->payload);
-	else
-		printf("%.*s%s", (int)message->payloadlen, (char*)message->payload, opts.delimiter);
-	//fflush(stdout);
-}
-*/
 
 void ConnectToServer (void)
 {
@@ -71,11 +52,12 @@ void ConnectToServer (void)
     data.cleansession = 1;
     
     rc = MQTTConnect(&c, &data);
-    printf("Connected %d\rr\n", rc);
+    printf("Connected %d\rr\n", rc); //Co the bo qua dong nay
     opts.showtopics = 1;
     
     char payload[100];
     sprintf(payload, "Hello huhu");
+    
     MQTTMessage msg;
     msg.payload = payload;
     msg.payloadlen = strlen(payload) + 1;
@@ -87,7 +69,6 @@ void ConnectToServer (void)
     while(1)
     {
       MQTTYield(&c, data.keepAliveInterval);
-      rc = MQTTPublish(&c, "abc", &msg);
     }
 
 }
