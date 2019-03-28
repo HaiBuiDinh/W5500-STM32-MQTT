@@ -1,0 +1,3 @@
+g++ pub.cpp -I ../../src/ -I ../../src/linux -I ../../../MQTTPacket/src ../../../MQTTPacket/src/MQTTPacket.c ../../../MQTTPacket/src/MQTTDeserializePublish.c ../../../MQTTPacket/src/MQTTConnectClient.c ../../../MQTTPacket/src/MQTTSubscribeClient.c ../../../MQTTPacket/src/MQTTSerializePublish.c ../../../MQTTPacket/src/MQTTUnsubscribeClient.c -o pub
+
+g++ sub.cpp -I ../../src/ -I ../../src/linux -I ../../../MQTTPacket/src ../../../MQTTPacket/src/MQTTPacket.c ../../../MQTTPacket/src/MQTTDeserializePublish.c ../../../MQTTPacket/src/MQTTConnectClient.c ../../../MQTTPacket/src/MQTTSubscribeClient.c ../../../MQTTPacket/src/MQTTSerializePublish.c ../../../MQTTPacket/src/MQTTUnsubscribeClient.c -o sub
