@@ -4,7 +4,6 @@
 #include "stdlib.h"
 #include "string.h"
 
-static void W5500_Network_Init(void);
 static uint8_t W5500_ReadByte(void);
 static void W5500_WriteByte(uint8_t byte);
 static void W5500_SPI_Init(void);

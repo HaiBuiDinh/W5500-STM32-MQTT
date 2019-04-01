@@ -1,4 +1,7 @@
 #include "mqtt_func.h"
+#include "signal.h"
+#include "stdio.h"
+#include "string.h"
 
 /* Include MQTT library */
 #include "mqtt_interface.h"
@@ -11,6 +14,13 @@ unsigned char tempBuffer[BUFFER_SIZE] = {0};
 
 unsigned char targetIP[4] = {192,168,1,234};
 unsigned int targetPort = 1883;
+
+volatile int toStop = 0;
+void cfinish(int sig)
+{
+  signal(SIGINT, NULL);
+  toStop = 1;
+}
 
 struct opts_struct
 {
@@ -40,6 +50,17 @@ void ConnectToServer (void)
     unsigned char buf[100];
     MQTTClientInit(&c, &n, 1000, buf, 100, tempBuffer, 2048);
     
+    //LWT can dang ki truoc khi connect
+    char payload_will[100];
+    sprintf(payload_will, "Invalid disconnection!!!");
+    MQTTPacket_willOptions will_data = MQTTPacket_willOptions_initializer;
+    will_data.retained = 0;
+    will_data.qos = QOS0;
+    will_data.topicName.cstring = "abc";
+    will_data.message.cstring = payload_will;
+    
+    
+    //data for connect
     MQTTPacket_connectData data =  MQTTPacket_connectData_initializer;
     data.willFlag = 0;
     data.MQTTVersion = 3;
@@ -48,15 +69,17 @@ void ConnectToServer (void)
     data.username.cstring = opts.username;
     data.password.cstring = opts.password;
     
-    data.keepAliveInterval = 60;
+    data.will = will_data;
+    data.willFlag = 1;
+    data.keepAliveInterval = 10;
     data.cleansession = 1;
     
     rc = MQTTConnect(&c, &data);
-    printf("Connected %d\rr\n", rc); //Co the bo qua dong nay
+    printf("Connected %d\r\n", rc); //Co the bo qua dong nay
     opts.showtopics = 1;
     
     char payload[100];
-    sprintf(payload, "Hello huhu");
+    sprintf(payload, "Hello broker");
     
     MQTTMessage msg;
     msg.payload = payload;
@@ -66,9 +89,11 @@ void ConnectToServer (void)
     
     rc = MQTTPublish(&c, "abc", &msg);
     
-    while(1)
+    while(!toStop)
     {
-      MQTTYield(&c, data.keepAliveInterval);
+      MQTTYield(&c,1000);
     }
-
+    
+    MQTTDisconnect(&c);
+    //NetworkDisconnect(&n);
 }
