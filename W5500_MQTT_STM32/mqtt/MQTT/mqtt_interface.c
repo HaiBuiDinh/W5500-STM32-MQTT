@@ -43,6 +43,7 @@
 #include "mqtt_interface.h"
 #include "wizchip_conf.h"
 #include "socket.h"
+#include "misc.h"
 
 unsigned long MilliTimer;
 
@@ -164,10 +165,21 @@ void w5500_disconnect(Network* n)
 int ConnectNetwork(Network* n, char* ip, int port)
 {
 	uint16_t myport = 2525;
-
+        NVIC_InitTypeDef NVIC_InitStructure;
+        
 	socket(n->my_socket,Sn_MR_TCP,myport,0);
         while (getSn_SR(n->my_socket) != SOCK_INIT);
 	connect(n->my_socket,ip,port);
+        
+        SysTick_CLKSourceConfig(SysTick_CLKSource_HCLK);
+        SysTick_Config(SystemCoreClock/1000); //nhay vao ngat sau moi 1ms, SystemClockCore = 168000000
+        
+        NVIC_InitStructure.NVIC_IRQChannel = SysTick_IRQn;
+        NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0; //Highest priority
+        NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+        NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+        NVIC_Init(&NVIC_InitStructure);
+        
         return (getSn_CR(n->my_socket));
         
 }

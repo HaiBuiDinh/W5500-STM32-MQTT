@@ -51,8 +51,10 @@ void ConnectToServer (void)
     MQTTClientInit(&c, &n, 1000, buf, 100, tempBuffer, 2048);
     
     //LWT can dang ki truoc khi connect
+    //data for will
     char payload_will[100];
     sprintf(payload_will, "Invalid disconnection!!!");
+    
     MQTTPacket_willOptions will_data = MQTTPacket_willOptions_initializer;
     will_data.retained = 0;
     will_data.qos = QOS0;
@@ -78,6 +80,7 @@ void ConnectToServer (void)
     printf("Connected %d\r\n", rc); //Co the bo qua dong nay
     opts.showtopics = 1;
     
+    //data for message
     char payload[100];
     sprintf(payload, "Hello broker");
     
@@ -91,7 +94,7 @@ void ConnectToServer (void)
     
     while(!toStop)
     {
-      MQTTYield(&c,1000);
+      MQTTYield(&c,data.keepAliveInterval);
     }
     
     MQTTDisconnect(&c);
